@@ -16,6 +16,7 @@ def newtask(numlist,originallist):
     originallist[taskchoice].append(add)
 #------Show task lists----------
 def show(numlist,originallist):
+  print("\n")
   for numlist in originallist:
     print(numlist)
 #-------Remove task------------
@@ -41,8 +42,8 @@ def removetask(numlist,originallist):
   return originallist
 #-------Remove list------------
 def removelist(numlist,originallist):
-  for numlist in originallist:
-    print(numlist)
+  for i in originallist:
+    print(i)
   listchoice=int(input("Choose the to-do list you would like to remove, 1 through %d \n" % numlist))
   if listchoice<1 or listchoice>numlist:
     print("Invalid choice!")
@@ -52,6 +53,7 @@ def removelist(numlist,originallist):
   return originallist
 #-----------Main---------------
 choice=""
+print("Make to-do lists!!")
 print("a) Make new to-do list")
 print("b) Add task to to-do list")
 print("c) Show task lists")
